@@ -1,0 +1,120 @@
+}<html>
+    <head>
+        <title>Gameroom | IEP</title>
+        <link rel="shortcut icon" href="img/Small-icon.png"/>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+        <script src="js/function.js"></script>
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="styles.css">
+
+        <script>
+          var scroll = new SmoothScroll('a[href*="#"]');
+        </script>
+    </head>
+
+
+    <body onload="hfindex()">
+      
+
+      <div id="HeaderIndex" class="text-center">
+        <div class="texto">
+          <img src="img/Logo.png" id=img style="width: 250px">
+          <h3>Bienvenido!</h3>
+          <p>Gameroom IEP es una pagina de juegos<br>
+            Haz click en el boton de abajo para seleccionar un juego y empezar.</p>
+          <a href="#1" id="btn1" class="btn btn-dark btn-md">Empezar</a>
+        </div>
+      </div> 
+
+
+      <div id="header"></div> 
+
+      <div id="Informacion">
+
+
+      <div id="Scroller">
+        <div id="demo" class="carousel slide" data-ride="carousel">
+          <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+          </ul>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="img/Proximamente.jpg" class="img-fluid" alt="Proximamente">
+              <div class="carousel-caption">
+                <h3>En Mantenimiento</h3>
+                <p>Este juego todavía no se encuentra disponible, en fase de desarrollo.</p>
+              </div>   
+            </div>
+            <div class="carousel-item">
+              <img src="img/Proximamente.jpg" class="img-fluid" alt="Proximamente">
+              <div class="carousel-caption">
+                <h3>En Mantenimiento</h3>
+                <p>Este juego todavía no se encuentra disponible, en fase de desarrollo.</p>
+              </div>   
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </a>
+          <a class="carousel-control-next" href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </a>
+        </div>
+      </div>
+
+      <div id="Nosotros">
+        <h3>Sobre Nosotros:</h3>
+        <p>Aqui pondremos información sobre nosotros y el proposito de esta página.</p>
+      </div>
+
+    </div>
+
+
+    <div id="FondoMenuJuegos">
+      <div id="MenuJuegos">
+          <h1 id="titulo">Nuestros Juegos:</h1>
+          <br>
+          <div class="card-deck">
+            <div class="card bg-custom">
+              <img class="card-img-top img-fluid" src="img/CardAhorcado.jpg" alt="Card image" style="width:100%">
+              <div class="card-body text-center">
+                <h4 id="titulo" class="card-title">Ahorcado</h4>
+                <p class="card-text">Este juego se encuentra en desarrollo, vuelve a intentarlo más tarde.</p>
+                <a href="Ahorcado/ahorcado.html" id="btn1" class="btn btn-block btn-dark stretched-link">Jugar</a>
+              </div>
+            </div>
+
+            <div class="card bg-custom">
+              <img class="card-img-top img-fluid" src="img/CardLoteria.jpg" alt="Card image" style="width:100%">
+              <div class="card-body text-center">
+                <h4 id="titulo" class="card-title">Lotería</h4>
+                <p class="card-text">Este juego se encuentra en desarrollo, vuelve a intentarlo más tarde.</p>
+                <a href="loteria/loteria.html" id="btn1" class="btn btn-block btn-dark stretched-link">Jugar</a>
+              </div>
+            </div>
+
+            <div class="card bg-custom">
+              <img class="card-img-top img-fluid" src="img/CardMayor.jpg" alt="Card image" style="width:100%">
+              <div class="card-body text-center">
+                <h4 id="titulo" class="card-title">Mayor</h4>
+                <p class="card-text">Este juego se encuentra en desarrollo, vuelve a intentarlo más tarde.</p>
+                <a href="Mayor/Mayor.html" id="btn1" class="btn btn-block btn-dark stretched-link">Jugar</a>
+              </div>
+            </div>
+          </div>
+          <br>
+          </div>
+
+          <div id="Linea"></div>
+          <div id="footer"></div>
+    </body>
+</html>

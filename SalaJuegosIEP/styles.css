@@ -1,0 +1,745 @@
+body{
+    background-color: #ff7e00;
+}
+#LogoHeader{
+    width: 20%;
+    display:block;
+    margin: 0px auto;
+}
+.bg-custom {
+    background: #292929;
+}
+
+#HeaderIndex{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-top: 12%;
+    margin-bottom: 12%;
+    align-items: center;
+}
+
+
+#scroller{
+    float: left;
+    width: 70%;
+}
+#informacion{
+    margin-left: 2%;
+    margin-right: 2%;
+}
+#Nosotros{
+    background-color: #292929;
+    margin-top: 2%;
+    margin-left: 72%;
+    margin-bottom: 35%;
+    align-items: center;
+    text-align: center;
+}
+
+
+h1{
+    font-size: 2vw;
+}
+h2{
+    color:white;
+    font-size: 2vw;
+}
+h3{
+    color: white;
+    font-size: 2vw;
+}
+h4{
+    font-size: 2vw;
+}
+p{
+    font-size: 1vw;
+    color: white;
+}
+
+
+label{
+    color:white;
+}
+
+
+#titulo{
+    text-align: center;
+    color:white;
+    font-size: 2vw;
+}
+
+
+#MenuJuegos{
+    margin-top: 2%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 2%;
+}
+#FondoMenuJuegos{
+    background-color:#292929;
+}
+
+
+.card{
+    width: 30%;
+    box-shadow: 0 4px 8px 5px rgba(255,126,0,1.2);
+}
+
+
+#btn1{
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+}
+#btn2{
+    background-color: #292929;
+    color:white
+}
+#btn3{
+    background-color: transparent;
+    color: black;
+    border: 1px solid black;
+}
+
+
+#Linea{
+    background-color: #ff7e00;
+    padding: 1%;
+}
+
+#Footer{
+    background-color: #292929;
+    text-align: center;
+    padding-bottom:1%;
+    padding-top: 1%;
+    line-height:10px;
+}
+#LoginFrame{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-right: 15%;
+    margin-left: 15%;
+    padding-left:  1%;
+    padding-right: 1%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background-color: #292929;
+}
+#myModal{
+    text-align: center;
+}
+
+
+/*Mayor*/
+
+#juego{
+    margin-left: 12%;
+}
+.Negro {
+    background-color: #292929;    
+}
+table {
+    margin-left: 18%;
+    width: 50%;
+    height: 50%;
+    border-collapse: separate;
+    border-spacing: 15px;
+}
+td {
+    border: 3px solid whitesmoke;
+    border-radius: 5px;
+    background-position: 10px;
+    background-image: url("Mayor/carta.jpg");
+    background-position: center;
+}
+.Texto {
+    text-align: center;
+    color: white;
+    font-size: 40px;
+}
+.Titulo {
+    text-align: center;
+    color: white;
+    font-size: 80px;
+    font-family: cursive;
+}
+.logo {
+    width: 260px;
+    height: 90px;
+}
+#difum{
+    filter: blur(4px);
+}
+#puntaje{
+    color: white;
+    text-align: right;
+    font-size: 25px;
+    font-family: cursive;
+    position: absolute;
+    width: 99%;
+
+}
+#como{
+    position: absolute;
+    right: 15%;
+    top: 14%;
+}
+.modal1{
+    display: none;
+    position: absolute;
+    top: 5%;
+    margin-left: 35%;
+}
+.modalreset{
+    position: absolute;
+}
+#TextoModal{
+    color:black;
+}
+/*Ahorcado*/
+#container, #inicioJuego{
+    padding-top: 2%;
+    text-align: center;
+    margin: auto;
+    width: 75%;
+    height: 100vh;
+    background-color: #292929;
+  }
+#LetraAhorcado{
+    font-family: "Walter Turncoat", cursive;
+    color:white;
+}
+.LetraAhorcadoPista{
+    font-family: "Walter Turncoat", cursive;
+    color:white;
+}
+
+#hueco-solucion{
+  margin: 1%;
+}
+
+h3, h2, h1{
+  margin: 1%;
+}
+
+  .titulo{
+    color: white;
+    font-weight: bolder;
+    font-size: 300%;
+    margin-top: 0px;
+    margin-bottom: 1%;
+    padding-top: 100px;
+  }
+
+  .descripcion{
+    color: white;
+    font-size: 150%;
+  }
+
+  .col {
+    margin-bottom: 1%;
+    padding-top: 1%;
+    padding-bottom: 2%;
+    text-align: center;
+  }
+
+  .partidas{
+    margin-left: 1%;
+    margin-right: 1%;
+    font-size: 120%;
+  }
+
+  .pizarron{
+    background-color: #346b31;
+    background-image: url(Ahorcado/img/pizarron.jpg);
+    background-size: cover;
+    border: 9px solid #caa472;
+    border-image: url(Ahorcado/img/madera.jpg) 20 round;
+    height: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    }
+
+  .acierto {
+    animation: zoomInOut 1s ease;
+  }
+
+  @keyframes zoomInOut {
+    0% { transform: scale(0); }
+    50% { transform: scale(1); }
+    70% { transform: scale(1); }
+    100% { transform: scale(1); }
+  }
+
+  .botonAhorcado {
+    width: 20%;
+    height: auto;
+    margin: 2%;
+    transition: transform .2s;
+    background-image: url("Ahorcado/img/papel.jpg");
+    border: none;
+    font-family: "Walter Turncoat", cursive;
+    font-size: 1.4vw;
+    font-weight: bolder;
+    cursor: pointer;
+  }
+
+  #jugar,#volver{
+    margin-top: 25%;
+  }
+
+  .button:hover {
+    transform: scale(1.2);
+  }
+
+  .letra {
+    width: 6rem;
+    margin: 0.9vh;
+    text-align: center;
+    transition: transform .2s;
+    background-image: url("Ahorcado/img/papel.jpg");
+  }
+
+  .letra:hover {
+    transform: scale(1.2);
+  }
+
+  .letra:disabled {
+    opacity: 0.5;
+  }
+
+  .inactive{
+    opacity: 0.5;
+  }
+
+  .oculto{
+    display: none;
+  }
+
+  .oscuro{
+    background-color: #292929;
+  }
+
+  picture {
+    position: relative;
+  }
+
+  picture img {
+    height: 50%;
+  }
+  #image5, #image4, #image3,
+  #image2, #image1, #image0 {
+    opacity: 0;
+    transition: opacity .3s ease;
+  }
+  .fade-in {
+    opacity: 1 !important;
+  }
+
+  /*Lotería*/
+  #bodyLoteria{
+	width: 100%;
+	height: 100%;
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-pack: center;
+			justify-content: center;
+	-webkit-box-align: center;
+			align-items: center;
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+  }
+  span{
+    font-size: 26px;
+	  font-family: 'Open Sans', sans-serif;
+  }
+    
+    input[type="button"] {
+    text-align: center;
+    padding: 14px 16px;
+    float: left;
+    display: block;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: none;
+    border: 2px solid #292929;
+    outline: none;
+    background-color: transparent;
+    color: #292929;
+    opacity: 1;
+    visibility: visible;
+    margin: 10px;
+    padding: 10px 25px;
+    font-size: 1.25rem;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    font-family: 'Open Sans', sans-serif;
+    }
+    input[type="button"]:hover {
+    background-color: rgb(172, 169, 169);
+    color: black;
+    }
+    input[type="button"].hidden {
+    opacity: 0;
+    visibility: hidden;
+    }
+    
+    .container {
+    display: flex !important;
+    position: relative;
+    flex-direction: column;
+    background: #ff7e00;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    }
+    .container #wrapper {
+    display: -webkit-box;
+    display: flex !important;
+    flex-wrap: wrap;
+    margin-left: 10px;
+    }
+    .container #wrapper .ball:not(:first-of-type) {
+    margin-left: 1mm;
+    }
+    .container #wrapper .ball {
+    display: -webkit-box;
+    display: flex !important;
+    -webkit-box-pack: center;
+        justify-content: center;
+    -webkit-box-align: center;
+        align-items: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 75%;
+    border: 1px solid #333;
+    font-size: 1.75rem;
+    color: #333;
+    margin-top: 10px;
+    opacity: 0;
+    }
+    .container #wrapper .ball.borrar {
+      visibility: hidden;
+    }
+    .container #wrapper .ball.show {
+    opacity: 1;
+    -webkit-animation: drop 0.5s ease-in, grow 0.4s 3.5s;
+        animation: drop 0.5s ease-in, grow 0.4s 3.5s;
+    -webkit-transition: opacity 0.4s, -webkit-transform 0.3s;
+    transition: opacity 0.4s, -webkit-transform 0.3s;
+    transition: opacity 0.4s, transform 0.3s;
+    transition: opacity 0.4s, transform 0.3s, -webkit-transform 0.3s;
+    }
+    .container #wrapper .ball.show:hover {
+    -webkit-transform: scale3d(1.3, 1.3, 1);
+        transform: scale3d(1.3, 1.3, 1);
+    }
+    .container #wrapper .ball .numWrapper {
+    display: -webkit-box;
+    display: flex !important;
+    -webkit-box-pack: center;
+        justify-content: center;
+    -webkit-box-align: center;
+        align-items: center;
+    background-color: #fff;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #666;
+    border-radius: 50%;
+    }
+    .container #wrapper .ball .numWrapper > span {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+      -ms-user-select: none;
+        user-select: none;
+    }
+  
+    .topnav {
+    overflow: hidden;
+    }
+  
+    .numbers {
+    overflow: hidden;
+    margin-left: 40px;
+    margin-right: 40px;
+    }
+  
+    .botonLoteria {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: center;
+        justify-content: center;
+    -webkit-box-align: center;
+        align-items: center;
+    background-color: #fff;
+    width: 200px;
+    height: 50px;
+    border: 1px solid #666;
+    border-radius: 50%;
+    font-size: 1.75rem;
+  }
+    
+    @-webkit-keyframes drop {
+    0% {
+      -webkit-transform: translate3d(0, -150px, 0);
+          transform: translate3d(0, -150px, 0);
+    }
+    100% {
+      -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+    }
+    }
+    
+    @keyframes drop {
+    0% {
+      -webkit-transform: translate3d(0, -150px, 0);
+          transform: translate3d(0, -150px, 0);
+    }
+    100% {
+      -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+    }
+    }
+    @-webkit-keyframes grow {
+    0% {
+      -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
+    }
+    50% {
+      -webkit-transform: scale3d(1.3, 1.3, 1);
+          transform: scale3d(1.3, 1.3, 1);
+    }
+    100% {
+      -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
+    }
+    }
+    @keyframes grow {
+    0% {
+      -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
+    }
+    50% {
+      -webkit-transform: scale3d(1.3, 1.3, 1);
+          transform: scale3d(1.3, 1.3, 1);
+    }
+    100% {
+      -webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
+    }
+    }
+  
+    * { margin: 0; padding: 0; }
+  
+
+    #h1Loteria {
+      display: inline;
+      position: relative;
+      font: 150px Helvetica, Sans-Serif;
+      letter-spacing: -3px;
+      color:#292929; 
+    }
+    
+    #h1Loteria:after {
+      
+      content: "Lotería";
+      position: absolute; left: 5px; top: 5px;
+      color: #545454;  
+    }
+  
+    .LoteriaLetra{
+      visibility: hidden;
+      color: #292929;
+      margin-top: 30px;
+      opacity: 1;
+      float: right;
+      width: 50%;
+      font-size: 17px;
+	    font-family: 'Open Sans', sans-serif;
+    }
+  
+    .mostrarp1{
+      visibility: visible;
+    }
+  
+    .mostrarp2{
+      color: #292929;
+      margin-top: 30px;
+      opacity: 1;
+      visibility: visible;
+    }
+  
+    .h2Loteria{
+      visibility: hidden;
+    }
+    .mostrar{
+      text-align: center;
+    padding: 14px 16px;
+    float: right;
+    display: block;
+    box-shadow: none;
+    outline: none;
+    background-color: transparent;
+    color: #292929;
+    opacity: 1;
+    visibility: visible;
+    margin: 10px;
+    margin-right: 20px;
+    padding: 10px 25px;
+    font-size: 1.25rem;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    font-family: 'Open Sans', sans-serif;
+    }
+  
+      .container #wrapper1 {
+      display: -webkit-box;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      -webkit-box-pack: center;
+    -webkit-box-align: center;
+        align-items: center;
+        padding: 10px 25px;
+        float: right;
+      width: 50%;
+      margin-right: auto;
+      margin-left: auto;
+      display: -webkit-inline-box;
+      }
+      .container #wrapper1 .ball1:not(:first-of-type) {
+      margin-left: 1mm;
+      }
+      .container #wrapper1 .ball1 {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-pack: center;
+          justify-content: center;
+      -webkit-box-align: center;
+          align-items: center;
+      width: 70px;
+      height: 70px;
+      border-radius: 75%;
+      border: 1px solid #333;
+      font-size: 1.75rem;
+      color: #333;
+      opacity: 0;
+      margin-right: 15px;
+      }
+      .container #wrapper1 .ball1.show1 {
+      opacity: 1;
+      -webkit-transition: opacity 0.4s, -webkit-transform 0.3s;
+      transition: opacity 0.4s, -webkit-transform 0.3s;
+      transition: opacity 0.4s, transform 0.3s;
+      transition: opacity 0.4s, transform 0.3s, -webkit-transform 0.3s;
+      }
+      .container #wrapper1 .ball1.show1:hover {
+      -webkit-transform: scale3d(1.3, 1.3, 1);
+          transform: scale3d(1.3, 1.3, 1);
+      }
+      .container #wrapper1 .ball1.show1.correcto {
+      -webkit-transform: scale3d(1.3, 1.3, 1);
+          transform: scale3d(1.3, 1.3, 1);
+      }
+      .container #wrapper1 .ball1 .numWrapper1 {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-pack: center;
+          justify-content: center;
+      -webkit-box-align: center;
+          align-items: center;
+      background-color: #fff;
+      width: 50px;
+      height: 50px;
+      border: 1px solid #666;
+      border-radius: 50%;
+      }
+      .container #wrapper1 .ball1 .numWrapper1 > span {
+      -webkit-user-select: none;
+         -moz-user-select: none;
+        -ms-user-select: none;
+          user-select: none;
+      }
+  
+      .border{
+      border: 5px solid #292929;
+      margin-top: 10px;
+      -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    font-family: 'Open Sans', sans-serif;
+      }
+  
+      .container #wrapper2 {
+      display: -webkit-box;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      -webkit-box-pack: center;
+    -webkit-box-align: center;
+        align-items: center;
+        padding: 10px 25px;
+        float: left;
+      width: 50%;
+      margin-right: auto;
+      margin-left: auto;
+      display: -webkit-inline-box;
+      }
+      .container #wrapper2 .ball2:not(:first-of-type) {
+      margin-left: 1mm;
+      }
+      .container #wrapper2 .ball2 {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-pack: center;
+          justify-content: center;
+      -webkit-box-align: center;
+          align-items: center;
+      width: 70px;
+      height: 70px;
+      border-radius: 75%;
+      border: 1px solid #333;
+      font-size: 1.75rem;
+      color: #333;
+      opacity: 0;
+      margin-right: 15px;
+      }
+      .container #wrapper2 .ball2.show2 {
+      opacity: 1;
+      -webkit-animation: drop 0.5s ease-in;
+          animation: drop 0.5s ease-in;
+      -webkit-transition: opacity 0.4s, -webkit-transform 0.3s;
+      transition: opacity 0.4s, -webkit-transform 0.3s;
+      transition: opacity 0.4s, transform 0.3s;
+      transition: opacity 0.4s, transform 0.3s, -webkit-transform 0.3s;
+      }
+      .container #wrapper2 .ball2.show2:hover {
+      -webkit-transform: scale3d(1.3, 1.3, 1);
+          transform: scale3d(1.3, 1.3, 1);
+      }
+      .container #wrapper2 .ball2.show2.correcto1 {
+      -webkit-transform: scale3d(1.3, 1.3, 1);
+          transform: scale3d(1.3, 1.3, 1);
+      }
+      .container #wrapper2 .ball2 .numWrapper2 {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-pack: center;
+          justify-content: center;
+      -webkit-box-align: center;
+          align-items: center;
+      background-color: #fff;
+      width: 50px;
+      height: 50px;
+      border: 1px solid #666;
+      border-radius: 50%;
+      }
+      .container #wrapper2 .ball2 .numWrapper2 > span {
+      -webkit-user-select: none;
+         -moz-user-select: none;
+        -ms-user-select: none;
+          user-select: none;
+      }
+    
+    
