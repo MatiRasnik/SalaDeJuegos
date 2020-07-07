@@ -76,12 +76,12 @@ border-radius: 50px;
 </head>
  
 <body>
-<form onSubmit="return false;">
+<form action='registrar.php' method='POST'>
     
      <h3>Usuario:</h3><input type="text" name="usuario" id="usuario">
      <h3>Nombre:</h3><input type="text" name="nombre" id="nombre">
     <h3><br>Contraseña:</h3> <input type="text" name="contraseña" id="contraseña">
-    <br><input type="button" value="Registrarse" onclick="guardar()">
+    <br><input type="submit" value="Registrarse">
     <input type="button" value="Eliminar cuenta" onclick="eliminar()">
 	<br><br>
     <div id="resultado"></div>

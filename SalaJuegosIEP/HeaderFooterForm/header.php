@@ -14,7 +14,11 @@
             <a class="nav-link" href="../Form/login.html">Login</a>
             <a class="nav-link" href="../Form/register.html">Register</a>
         </ul>
-
+        <?php
+        session_start();
+        
+        echo "<h2>Bienvenido: ". $_SESSION['usuario']."</h2>";
+        ?>
         </div>
     </nav>
 </div> 
