@@ -62,11 +62,6 @@ label{
 }
 
 
-#titulo{
-    text-align: center;
-    color:white;
-    font-size: 2vw;
-}
 
 
 #MenuJuegos{
@@ -202,7 +197,7 @@ td {
     text-align: center;
     margin: auto;
     width: 75%;
-    height: 100vh;
+    height: 125vh;
     background-color: #292929;
   }
 #LetraAhorcado{
@@ -255,7 +250,7 @@ h3, h2, h1{
     background-size: cover;
     border: 9px solid #caa472;
     border-image: url(Ahorcado/img/madera.jpg) 20 round;
-    height: 60%;
+    height: 65%;
     margin-left: 20%;
     margin-right: 20%;
     }
@@ -576,7 +571,7 @@ h3, h2, h1{
     }
     .mostrar{
       text-align: center;
-    padding: 14px 16px;
+
     float: right;
     display: block;
     box-shadow: none;
@@ -586,8 +581,7 @@ h3, h2, h1{
     opacity: 1;
     visibility: visible;
     margin: 10px;
-    margin-right: 20px;
-    padding: 10px 25px;
+
     font-size: 1.25rem;
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
@@ -626,7 +620,7 @@ h3, h2, h1{
       font-size: 1.75rem;
       color: #333;
       opacity: 0;
-      margin-right: 15px;
+
       }
       .container #wrapper1 .ball1.show1 {
       opacity: 1;
@@ -703,7 +697,7 @@ h3, h2, h1{
       font-size: 1.75rem;
       color: #333;
       opacity: 0;
-      margin-right: 15px;
+
       }
       .container #wrapper2 .ball2.show2 {
       opacity: 1;

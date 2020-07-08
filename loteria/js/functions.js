@@ -169,32 +169,32 @@ const init1 = () => {
 			return 0;
 		  });
 		displayResult(lotto, balls);
+
 		var puntos=0;
 		var aciertos=0;
-for(let x=0; x<balls.length; x++){
-	for (let y=0; y<balls.length; y++){
-		if(balls[x].querySelector("span").innerHTML==balls5[y].querySelector("span").innerHTML){
-			puntos=puntos+10;
-			aciertos=aciertos+1;
-			balls[x].classList.add("correcto");
-			balls5[y].classList.add("correcto1");
+		for(let x=0; x<balls.length; x++){
+			for (let y=0; y<balls.length; y++){
+				if(balls[x].querySelector("span").innerHTML==balls5[y].querySelector("span").innerHTML){
+					puntos=puntos+10;
+					aciertos=aciertos+1;
+					balls[x].classList.add("correcto");
+					balls5[y].classList.add("correcto1");
+				}
+			}
 		}
-	}
-}
 
+		document.getElementById("ac").innerHTML = aciertos;
 
+		if (puntos==50){
+			puntos=puntos+100;
+		}else if(puntos==60){
+			puntos=puntos+1000;
+		}
 
-document.getElementById("ac").innerHTML = aciertos;
-
-if (puntos==50){
-	puntos=puntos+100;
-}else if(puntos==60){
-	puntos=puntos+1000;
-}
-window.totales1=puntos;
-window.totales=window.totales+window.totales1;
-document.getElementById("contenido").innerHTML = puntos;
-document.getElementById("total").innerHTML = window.totales;
+		window.totales1=puntos;
+		window.totales=window.totales+window.totales1;
+		document.getElementById("contenido").innerHTML = puntos;
+		document.getElementById("total").innerHTML = window.totales;
 
 
 

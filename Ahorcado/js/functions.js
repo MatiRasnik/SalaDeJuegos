@@ -153,12 +153,6 @@ function inicializarSession(){
   }
 }
 
-// Empieza a jugar
-function jugar(){
-  document.getElementById("container").className = "zoom-in";
-  document.getElementById("inicioJuego").className = "oculto";
-}
-
 // Restablecer juego
 function inicio() {
   $("#header").load("../HeaderFooterForm/header.php"); 

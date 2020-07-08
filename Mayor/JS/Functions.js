@@ -24,6 +24,7 @@
   function elegirCarta(){
     if(r==2){
           var evento = window.event;           
+          r++;
 var valorCarta = evento.target.dataset.valor;
 if(document.getElementById("0").dataset.valor==valorCarta){
           var CartaElegida = 0;
