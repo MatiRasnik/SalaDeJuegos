@@ -34,7 +34,7 @@ if(document.getElementById("0").dataset.valor==valorCarta){
           var CartaElegida = 2;
 }
 var modalMostrar = true;
-var cero = document.getElementById("0").dataset.valor;
+var cer0 = document.getElementById("0").dataset.valor;
 var uno = document.getElementById("1").dataset.valor;
 var dos = document.getElementById("2").dataset.valor;
 var valorCartaElegida = document.getElementById(CartaElegida.toString()).dataset.valor;
