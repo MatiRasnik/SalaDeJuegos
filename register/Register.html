@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <div id="div-1">
+        </div>
+        <style>
+        .avatar {
+            vertical-align: middle;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        </style>
+          <h2>Avatares</h2>
+          <span class="avatar"></span>
+<input span type="image" img src="avatar.jpg" alt="Avatar" class="avatar">
+<input span type="image" img src="avatar2.jpg" alt="Avatar" class="avatar">
+<input span type="image" img src="avatar3.jpg" alt="Avatar" class="avatar">
+<input span type="image" img src="avatar4.jpg" alt="Avatar" class="avatar">
+<input span type="image" img src="avatar5.jpg" alt="Avatar" class="avatar">
+<input span type="image" img src="avatar6.jpg" alt="Avatar" class="avatar">
+
+        <script>
+         	function guardar()
+	{
+        
+		localStorage.setItem("usuario", document.getElementById("usuario").value);
+        localStorage.setItem("nombre", document.getElementById("nombre").value);
+        localStorage.setItem("contraseña", document.getElementById("contraseña").value);
+        location.reload();
+	}
+	function eliminar()
+	{
+        localStorage.clear();
+        location.reload();
+		mostrarDatos();
+	}
+	function mostrarDatos()
+	{
+        if(localStorage.getItem("usuario")){
+		var resultado="Usuario: "+localStorage.getItem("usuario");
+		document.getElementById("resultado").innerHTML=resultado;
+        }
+        if(localStorage.getItem("nombre")){
+		var resultado="Nombre : "+localStorage.getItem("nombre");
+        document.getElementById("nombre").innerHTML=resultado;
+        }
+        if(localStorage.getItem("contraseña")){
+		var resultado="Contraseña: "+localStorage.getItem("contraseña");
+		document.getElementById("contraseña").innerHTML=resultado;
+        }
+        
+	}
+ 
+	window.onload=function()
+	{
+        mostrarDatos();
+ 
+            document.getElementById("usuario").value=localStorage.getItem("usuario");
+			document.getElementById("nombre").value=localStorage.getItem("nombre");
+            document.getElementById("contraseña").value=localStorage.getItem("contraseña");
+	}
+	</script>
+ 
+	<style>
+	input[type=button] {
+border: 1px solid #2e518b; 
+padding: 10px; 
+background-color: #2e518b; 
+color: #ffffff; 
+text-decoration: none; 
+text-transform: uppercase; 
+font-family: 'Helvetica', sans-serif; 
+border-radius: 50px; 
+}
+	</style>
+</head>
+ 
+<body>
+<form action='registrar.php' method='POST'>
+    
+     <h3>Usuario:</h3><input type="text" name="usuario" id="usuario">
+     <h3>Nombre:</h3><input type="text" name="nombre" id="nombre">
+    <h3><br>Contraseña:</h3> <input type="text" name="contraseña" id="contraseña">
+    <br><input type="submit" value="Registrarse">
+    
+	<br><br>
+    <div id="resultado"></div>
+    <input span type="image" alt="div-1" class="avatar">
+</form>

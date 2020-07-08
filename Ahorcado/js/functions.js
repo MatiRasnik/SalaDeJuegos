@@ -161,6 +161,8 @@ function jugar(){
 
 // Restablecer juego
 function inicio() {
+  $("#header").load("../HeaderFooterForm/header.php"); 
+  $("#footer").load("../HeaderFooterForm/footer.html"); 
   generaPalabra();
   pintarGuiones(palabra.length);
   generaABC("a","z");

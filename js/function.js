@@ -4,6 +4,6 @@ function hfindex(){
 };
 
 function hfform(){
-    $("#header").load("../HeaderFooterForm/header.html"); 
+    $("#header").load("../HeaderFooterForm/header.php"); 
     $("#footer").load("../HeaderFooterForm/footer.html");  
 };
