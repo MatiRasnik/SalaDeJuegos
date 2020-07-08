@@ -197,7 +197,7 @@ td {
     text-align: center;
     margin: auto;
     width: 75%;
-    height: 100vh;
+    height: 125vh;
     background-color: #292929;
   }
 #LetraAhorcado{
@@ -250,7 +250,7 @@ h3, h2, h1{
     background-size: cover;
     border: 9px solid #caa472;
     border-image: url(Ahorcado/img/madera.jpg) 20 round;
-    height: 60%;
+    height: 65%;
     margin-left: 20%;
     margin-right: 20%;
     }
