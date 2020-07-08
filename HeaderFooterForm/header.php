@@ -12,7 +12,7 @@
         <ul class="navbar-nav">
             <a class="nav-link" href="../index.html">Inicio</a>
             <a class="nav-link" href="../Form/login.html">Login</a>
-            <a class="nav-link" href="../Form/register.html">Register</a>
+            <a class="nav-link" href="../register/register.html">Register</a>
         </ul>
         <?php
         session_start();
