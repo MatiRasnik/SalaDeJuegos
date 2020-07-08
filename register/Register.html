@@ -1,5 +1,17 @@
 <html>
     <head>
+        <meta charset="UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+        <script src="../js/function.js"></script>
+        <script src="JS/Functions.js"></script>
+    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="../styles.css">
+        <title>Gameroom | Registrarse</title>
         <div id="div-1">
         </div>
         <style>
@@ -10,14 +22,6 @@
             border-radius: 50%;
         }
         </style>
-          <h2>Avatares</h2>
-          <span class="avatar"></span>
-<input span type="image" img src="avatar.jpg" alt="Avatar" class="avatar">
-<input span type="image" img src="avatar2.jpg" alt="Avatar" class="avatar">
-<input span type="image" img src="avatar3.jpg" alt="Avatar" class="avatar">
-<input span type="image" img src="avatar4.jpg" alt="Avatar" class="avatar">
-<input span type="image" img src="avatar5.jpg" alt="Avatar" class="avatar">
-<input span type="image" img src="avatar6.jpg" alt="Avatar" class="avatar">
 
         <script>
          	function guardar()
@@ -75,15 +79,41 @@ border-radius: 50px;
 	</style>
 </head>
  
-<body>
-<form action='registrar.php' method='POST'>
-    
-     <h3>Usuario:</h3><input type="text" name="usuario" id="usuario">
-     <h3>Nombre:</h3><input type="text" name="nombre" id="nombre">
-    <h3><br>Contraseña:</h3> <input type="text" name="contraseña" id="contraseña">
-    <br><input type="submit" value="Registrarse">
-    
-	<br><br>
-    <div id="resultado"></div>
-    <input span type="image" alt="div-1" class="avatar">
-</form>
+<body onload="hfform()">
+    <div id="header"></div>
+    <div id="LoginFrame">
+        <div>
+            <h2>Registrarse:</h2>
+            <p>Registrate en Gameroom IEP y guarda todo tus logros y progresos.</p>
+
+            <div id="Avatares">
+                <h2>Avatares</h2>
+                <span class="avatar"></span>
+                <input span type="image" img src="avatar.jpg" alt="Avatar" class="avatar">
+                <input span type="image" img src="avatar2.jpg" alt="Avatar" class="avatar">
+                <input span type="image" img src="avatar3.jpg" alt="Avatar" class="avatar">
+                <input span type="image" img src="avatar4.jpg" alt="Avatar" class="avatar">
+                <input span type="image" img src="avatar5.jpg" alt="Avatar" class="avatar">
+                <input span type="image" img src="avatar6.jpg" alt="Avatar" class="avatar">
+            </div>
+
+            <form action='registrar.php' method='POST'>
+              <div class="form-group">
+                <label for="uname">Usuario:</label>
+                <input type="text" class="form-control" id="usuario" placeholder="Ingrese Usuario" name="usuario">
+              </div>
+              <div class="form-group">
+                <label for="uname">Nombre:</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Ingrese Nombre" name="nombre">
+              </div>
+              <div class="form-group">
+                <label for="pwd">Contraseña:</label>
+                <input type="password" class="form-control" id="contrasenia" placeholder="Ingrese Contraseña" name="contrasenia">
+              </div>
+              <button id="btn1" type="submit" class="btn btn-md btn-custom">Registrarse</button>
+            </form>
+        </div>
+    </div>
+    <div id="footer"></div>
+</body>
+</html>

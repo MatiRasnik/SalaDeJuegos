@@ -109,6 +109,9 @@ label{
     padding-top: 1%;
     line-height:10px;
 }
+#tituloBlanco{
+  color:white;
+}
 #LoginFrame{
     margin-top: 2%;
     margin-bottom: 2%;
@@ -119,6 +122,10 @@ label{
     padding-top: 1%;
     padding-bottom: 1%;
     background-color: #292929;
+}
+#Avatares{
+  text-align: center;
+  margin: 0px auto;
 }
 #myModal{
     text-align: center;
