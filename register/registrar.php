@@ -3,7 +3,7 @@ include '../conexion.php';
 session_start();
 if(isset($_POST['usuario']) && $_POST['nombre'] && $_POST['contrasenia']){
     // aquí pongo lo de mysql para verificar que no exista usuario y para guardar el nuevo usuario.
-    //$usuario = $mysqli->query("SELECT usuario FROM usuarios WHERE usuario = ".$_POST['usuario'])->fetch_object()->usuario;
+    
     $sql = "SELECT usuario FROM usuarios WHERE usuario = ".$_POST['usuario'];
 
     if ($result = $mysqli -> query($sql)) {
