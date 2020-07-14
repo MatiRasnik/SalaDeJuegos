@@ -111,6 +111,7 @@ label{
 }
 #tituloBlanco{
   color:white;
+  text-align: center;
 }
 #LoginFrame{
     margin-top: 2%;
