@@ -117,7 +117,3 @@ document.getElementById("puntaje").innerHTML="Puntos: " +puntos;
     var ganar = document.getElementById("perder");
     ganar.style.display="none";
   }
-function reset(){
-  puntos = 0;
-  document.getElementById("puntaje").innerHTML="Puntos: " +puntos;
-}
