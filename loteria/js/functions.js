@@ -169,7 +169,7 @@ const init1 = () => {
 			return 0;
 		  });
 		displayResult(lotto, balls);
-
+		
 		var puntos=0;
 		var aciertos=0;
 		for(let x=0; x<balls.length; x++){
@@ -199,7 +199,14 @@ const init1 = () => {
 
 
 		button3.classList.remove("hidden");
+
+		var puntajeTotal= widnow.totales;
+		$.post( "localhost\SalaDeJuegos\puntos.php", { "puntajeTotal" : puntajeTotal, "id_juego" : 2 } , function( data ) {
+		$( ".result" ).html( data );
+	  });
+
 	});
+	
 
 
 };
