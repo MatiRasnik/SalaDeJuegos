@@ -1,13 +1,15 @@
 <?php
 include '../conexion.php';
 if(isset($_POST['usuario']) && $_POST['contrasenia']){
-    $sql = "SELECT contra FROM usuarios WHERE contra = ".$_POST['contrasenia'];
+    $sql = "SELECT contra FROM usuarios WHERE usuario = '".$_POST['usuario']."'";
     $result = $mysqli -> query($sql);
+    
         if ($result) {
             session_start();
             $_SESSION['usuario']=$_POST['usuario'];
+            header('Location: ../index.html');
         }else{
-    echo "El Usuario o contaseña no son correctas";
+        echo '<script language="javascript">alert("El usuario o la contra esta mal!");</script>';
     }
 }
 ?>
