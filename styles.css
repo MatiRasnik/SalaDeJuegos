@@ -17,7 +17,16 @@ body{
     margin-bottom: 12%;
     align-items: center;
 }
-
+.dropdown .dropdown-menu{
+  background-color: #292929;
+}
+.dropdown-item:hover{
+  background-color: #383838;
+  color:white;
+}
+.dropdown-item{
+  color:white;
+}
 
 #scroller{
     float: left;
