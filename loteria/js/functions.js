@@ -201,6 +201,7 @@ const init1 = () => {
 		button3.classList.remove("hidden");
 
 		var puntajeTotal= window.totales;
+		
 		$.post( "../puntos.php", { "puntajeTotal" : puntajeTotal, "id_juego" : 2 } , function( data ) {
 		$( ".result" ).html( data );
 	  });
