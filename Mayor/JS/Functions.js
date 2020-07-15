@@ -117,3 +117,15 @@ document.getElementById("puntaje").innerHTML="Puntos: " +puntos;
     var ganar = document.getElementById("perder");
     ganar.style.display="none";
   }
+  function makeUnselectable(node) {
+    if (node.nodeType == 1) {
+        node.setAttribute("unselectable", "on");
+    }
+    var child = node.firstChild;
+    while (child) {
+        makeUnselectable(child);
+        child = child.nextSibling;
+    }
+}
+
+makeUnselectable(document.getElementById("foo"));

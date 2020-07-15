@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles.css">
+    <meta name="google" content="notranslate" />
     <title>Gameroom | El Mayor</title>
   </head>
 
@@ -33,7 +34,7 @@
       <div class="Titulo">
         El Mayor
       </div>
-      <div id="juego">
+      <div id="juego" unselectable="on" class="unselectable">
                     <table>
                        <tr id="difum">
                         <td id="0" class="Texto" data-valor="valor" onclick="elegirCarta()"></td>
