@@ -21,10 +21,23 @@
                   <a class="dropdown-item" href="Mayor/Mayor.php">Mayor</a>
                 </div>
             </li>
-            <a class="nav-link" href="register/Login.html">Login</a>
-            <a class="nav-link" href="register/Register.html">Register</a>
+            <?php
+            session_start();
+                if(isset ($_SESSION['usuario'])){  
+                    $buttonvisible = "display: none;";
+                    $buttonvisible1 = "display: block;";
+
+                }else{
+                    $buttonvisible1 = "display: none;";
+                    $buttonvisible = "display: block;";
+                }
+                ?>   
+            <a class="nav-link" href="register/Login.html" style="<?php echo $buttonvisible ?>">Login</a>
+            <a class="nav-link" href="register/Register.html" style="<?php echo $buttonvisible ?>">Register</a>
+            <a class="nav-link" href="register/CerrarSesion.php" style="<?php echo $buttonvisible1 ?>">Cerrar Sesion</a>
         </ul>
 
         </div>
     </nav>
+
 </div> 

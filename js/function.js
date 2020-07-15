@@ -1,5 +1,5 @@
 function hfindex(){
-    $("#header").load("HeaderFooterIndex/header.html"); 
+    $("#header").load("HeaderFooterIndex/header.php"); 
     $("#footer").load("HeaderFooterIndex/footer.html"); 
 };
 

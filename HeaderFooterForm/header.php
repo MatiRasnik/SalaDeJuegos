@@ -11,12 +11,21 @@
         <div class="collapse navbar-collapse flex-md-column" id="navbar">
         <ul class="navbar-nav">
             <a class="nav-link" href="../index.html">Inicio</a>
-            <a class="nav-link" href="../register/login.html">Login</a>
-            <a class="nav-link" href="../register/register.html">Register</a>
+            <?php
+            session_start();
+                if(isset ($_SESSION['usuario'])){  
+                    $buttonvisible = "display: none;";
+
+                }else{
+                    $buttonvisible = "display: block;";
+                }
+                ?>   
+            <a class="nav-link" href="register/Login.html" style="<?php echo $buttonvisible ?>">Login</a>
+            <a class="nav-link" href="register/Register.html" style="<?php echo $buttonvisible ?>">Register</a>
         </ul>
         <?php
-        session_start();
         
+        if(isset($_SESSION['usuario'])){
         echo "<h2>Bienvenido: ". $_SESSION['usuario']."</h2>";
 
         $reg= $_SESSION['reg'];
@@ -26,6 +35,7 @@
         echo '<script language="javascript">alert("Debe registrarse!");</script>';
  
         };
+    }
         ?>
         </div>
     </nav>

@@ -1,7 +1,7 @@
 // ### VARIABLES ###
 
 // Array de palabras
-var palabras = [["atlantico", "Un océano"], ["computadora", "Una calculadora evolucionada"], ["rosa", "Flor del amor"], ["plaza", "Espacio público verde"], ["rueda", "Gran invento"], ["manzana", "Una fruta"], ["jenga", "Un juego de caja"], ["pino", "Un árbol del pinar"], ["everest", "Famosa montaña"], ["relampago", "Antecede al trueno"], ["gato", "Un animal"], ["alemania", "Un país famoso por su cerveza"], ["uruguay", "Un país de vacas"], ["dibujo", "Representación gráfica"], ["picnic", "Actividad en la naturaleza"], ["bizcocho", "De la panadería"], ["pastel", "De la pastelería"], ["biblioteca", "Lugar para estudiar"], ["football", "Deporte mundial"], ["mermelada", "Pasta de frutas comestibles"],["oso", "Animal que hiberna"],["liceo", "Esclavos del..."],["rock", "Estilo de musica donde se usa la guitarra"],["pasta", "Comida italiana"],["francia", "El pais del amor"],["mate", "Bebida bien Uruguaya"],["biologia", "Ciencia que estudia los seres vivos"],["olla", "Utensilio de cocina"],["galletitas", "Bien de paraguayo"],["incas", "Razas indigenas"],["paraguay", "País que no existe"],["caleidoscopio", "Tubo con 3 espejos"],["eclipse", "Tercera pelicula de crepusculo"],["ra", "luna roja"],["mario", "plomero rojo"],["syso", "System.out.println();"],["syso", "System.out.println();"]];
+var palabras = [["atlantico", "Un océano"], ["computadora", "Una calculadora evolucionada"], ["rosa", "Flor del amor"], ["plaza", "Espacio público verde"], ["rueda", "Gran invento"], ["manzana", "Una fruta"], ["jenga", "Un juego de caja"], ["pino", "Un árbol del pinar"], ["everest", "Famosa montaña"], ["relampago", "Antecede al trueno"], ["gato", "Un animal"], ["alemania", "Un país famoso por su cerveza"], ["uruguay", "Un país de vacas"], ["dibujo", "Representación gráfica"], ["picnic", "Actividad en la naturaleza"], ["bizcocho", "De la panadería"], ["pastel", "De la pastelería"], ["biblioteca", "Lugar para estudiar"], ["football", "Deporte mundial"], ["mermelada", "Pasta de frutas comestibles"],["oso", "Animal que hiberna"],["liceo", "Esclavos del..."],["rock", "Estilo de musica donde se usa la guitarra"],["pasta", "Comida italiana"],["francia", "El pais del amor"],["mate", "Bebida bien Uruguaya"],["biologia", "Ciencia que estudia los seres vivos"],["olla", "Utensilio de cocina"],["galletitas", "Bien de paraguayo"],["incas", "Razas indigenas"],["paraguay", "País que no existe"],["caleidoscopio", "Tubo con 3 espejos"],["eclipse", "Tercera pelicula de crepusculo"],["mario", "plomero rojo"],["syso", "System.out.println();"],["syso", "System.out.println();"]];
 // Palabra a averiguar
 var palabra = "";
 // Nº aleatorio
@@ -20,7 +20,7 @@ var buttons = document.getElementsByClassName('letra');
 var btnInicio = document.getElementById("reset");
 // Variables para los contadores
 var contP;
-var contG;
+var contG = 0;
 
 
 // ### FUNCIONES ###
@@ -111,10 +111,9 @@ function compruebaFin(letra) {
 
 // Aumenta el contador si el usuario gana
 function ganar(){
-  contG = sessionStorage.getItem('ganadas');
-  contG++;
-  sessionStorage.setItem('ganadas', contG);
-  document.getElementById("ganadas").innerHTML = contG;
+  $.post( "../puntos.php", { "puntajeTotal" : 1, "id_juego" : 1} , function( data ) {
+    document.getElementById("ganadas").innerHTML = data;
+  });
 }
 
 // Aumenta el contador si el usuario pierde
@@ -126,29 +125,11 @@ function perder(){
   console.log(contP);
 }
 
-// Muestra las partidas perdidas
-function mostrarPerdidas(){
-  contP = sessionStorage.getItem('perdidas');
-  sessionStorage.setItem('perdidas', contP);
-  document.getElementById("perdidas").innerHTML = contP;
-}
-
-// Muestra las partidas ganadas
-function mostrarGanadas(){
-  contG = sessionStorage.getItem('ganadas');
-  sessionStorage.setItem('ganadas', contG);
-  document.getElementById("ganadas").innerHTML = contG;
-  console.log(contG);
-}
-
 // Inicializa las variables session si son null
 function inicializarSession(){
-  contG = sessionStorage.getItem('ganadas');
   contP = sessionStorage.getItem('perdidas');
-  if(contG==null&&contP==null){
-    contG = 0;
+  if(contP==null){
     contP = 0;
-    sessionStorage.setItem('ganadas', contG);
     sessionStorage.setItem('perdidas', contP);
   }
 }
@@ -157,15 +138,14 @@ function inicializarSession(){
 function inicio() {
   $("#header").load("../HeaderFooterForm/header.php"); 
   $("#footer").load("../HeaderFooterForm/footer.html"); 
+  $.post( "../puntos.php", { "puntajeTotal" : contG, "id_juego" : 1} , function( data ) {
+    document.getElementById("ganadas").innerHTML = data;
+  });
   generaPalabra();
   pintarGuiones(palabra.length);
   generaABC("a","z");
   cont = 6;
   document.getElementById("reset").disabled = true;
   inicializarSession()
-  mostrarPerdidas();
-  mostrarGanadas();
-  $.post( "../puntos.php", { "puntajeTotal" : sessionStorage.getItem('ganadas'), "id_juego" : 1} , function( data ) {
-    $( ".result" ).html( data );
-    });
+  
 }
