@@ -1,7 +1,11 @@
 
     var puntos = 0;
     var r = 0;
+    $.post( "../puntos.php", { "puntajeTotal" : puntos, "id_juego" : 3} , function( data ) {
+      document.getElementById("puntaje").innerHTML = "Puntos: " + data;
+    }); 
     function iniciarJuego(){
+      
     var dato1 = document.getElementById("difum");
     dato1.style.filter="blur(0px)"
      r = 1
@@ -80,10 +84,11 @@ if(CartaElegida==2){
 
   }
 }
+puntos =0;
  if(valorCartaElegida2>=uno2){
     if(valorCartaElegida2>=dos2){
       if(valorCartaElegida2>=cero2){
-          puntos = puntos + 100;   
+          puntos = 100;
           modalMostrar = false;
        }
       }
@@ -97,10 +102,9 @@ if(CartaElegida==2){
           var perder = document.getElementById("perder");
           perder.style.display="block"
        } 
-document.getElementById("puntaje").innerHTML="Puntos: " +puntos;
-$.post( "../puntos.php", { "puntajeTotal" : puntos, "id_juego" : 3} , function( data ) {
-  $( ".result" ).html( data );
-  });
+       $.post( "../puntos.php", { "puntajeTotal" : puntos, "id_juego" : 3} , function( data ) {
+        document.getElementById("puntaje").innerHTML = "Puntos: " + data;
+      }); 
  r=1;   
     }
     setTimeout(normal, 4000)

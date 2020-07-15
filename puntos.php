@@ -17,37 +17,39 @@ if(isset($_POST['puntajeTotal']) && $_POST['id_juego']){
     }else
     $id_juego = $_POST['id_juego'];
 
-    
+    $usuario = '"'.$mysqli->real_escape_string($_SESSION['usuario']).'"';
+    $id_juego = '"'.$mysqli->real_escape_string($_POST['id_juego']).'"';
 
     $sql1 = "SELECT usuario FROM puntaje WHERE usuario = ".$usuario." and id_juego= ".$_POST['id_juego'];
-       
+    $usuario1 = $mysqli->query($sql1);
         
-        if ($result = $mysqli -> query($sql1)) {
+        if ($usuario1->num_rows > 0) {
             $sql2 = "SELECT puntos_j FROM puntaje WHERE usuario = ".$usuario." and id_juego= ".$_POST['id_juego'];
     
-            $puntajeTotal1 = $puntos_j;
-            $puntos_j = $sql2 + $puntajeTotal1;
+            $result = $mysqli->query($sql2);
+            $row = $result->fetch_assoc();
+            $puntos = $row["puntos_j"];    
 
+        
+            $puntajeTotal1 = $puntos_j;
+            $puntos_j = $puntos + $puntajeTotal1;
+            
             $sql = "UPDATE puntaje SET puntos_j = ".$puntos_j." WHERE usuario = ".$usuario." and id_juego= ".$_POST['id_juego'];
            
             $insert_row = $mysqli->query($sql);
 
-            $sql4 = "SELECT puntos_j FROM puntaje WHERE usuario = ".$usuario." and id_juego= ".$_POST['id_juego'];
-            echo $sql4;
+            echo $puntos_j;
 
         }else{
-        $usuario = '"'.$mysqli->real_escape_string($_SESSION['usuario']).'"';
-        $puntos_j = '"'.$mysqli->real_escape_string($_POST['puntajeTotal']).'"';
-        $id_juego = '"'.$mysqli->real_escape_string($_POST['id_juego']).'"';
         $sql3="INSERT INTO puntaje (id_juego, usuario, puntos_j) VALUES(".$_POST['id_juego'].",". $usuario.", ".$_POST['puntajeTotal'].")";
            
         $insert_row = $mysqli->query($sql3);
-
-        $sql5 = "SELECT puntos_j FROM puntaje WHERE usuario = ".$usuario." and id_juego= ".$_POST['id_juego'];
-        echo $sql5;
+        
+        echo $puntos_j;
         
         }
         $mysqli -> close();
     }
 
 ?>
+
