@@ -5,8 +5,8 @@ if(isset($_POST['usuario']) && $_POST['nombre'] && $_POST['contrasenia']){
     // aquí pongo lo de mysql para verificar que no exista usuario y para guardar el nuevo usuario.
     
     $sql = "SELECT usuario FROM usuarios WHERE usuario = ".$_POST['usuario'];
-
-    if ($result = $mysqli -> query($sql)) {
+    $result = $mysqli -> query($sql);
+    if ($result) {
       // es error, el usuario existe.
       echo 'lo lamento... ya existe usuario';
       $result -> free_result();
