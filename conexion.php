@@ -1,6 +1,6 @@
 <?php
 //Open a new connection to the MySQL server
-$mysqli = new mysqli('localhost','root','rootroot','sala_juegos');
+$mysqli = new mysqli('localhost','root','root','sala_juegos');
 
 //Output any connection error
 if ($mysqli->connect_error) {
