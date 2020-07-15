@@ -14,10 +14,11 @@ if(isset($_POST['usuario']) && $_POST['nombre'] && $_POST['contrasenia']){
         // aquí grabamos el nuevo usuario.
         $usuario = '"'.$mysqli->real_escape_string($_POST['usuario']).'"';
         $nombre = '"'.$mysqli->real_escape_string($_POST['nombre']).'"';
+        $apellido = '"'.$mysqli->real_escape_string($_POST['apellido']).'"';
         $contrasenia = '"'.$mysqli->real_escape_string($_POST['contrasenia']).'"';
 
         //MySqli Insert Query
-        $insert_row = $mysqli->query("INSERT INTO usuarios (usuario, nombre, apellido, contra) VALUES($usuario, $nombre,'apellidos', $contrasenia)");
+        $insert_row = $mysqli->query("INSERT INTO usuarios (usuario, nombre, apellido, contra) VALUES($usuario, $nombre,$apellido, $contrasenia)");
 
         if($insert_row){
             print 'Ok, todo grabado : ' .$mysqli->insert_id .'<br />'; 
