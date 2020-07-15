@@ -98,6 +98,9 @@ if(CartaElegida==2){
           perder.style.display="block"
        } 
 document.getElementById("puntaje").innerHTML="Puntos: " +puntos;
+$.post( "../puntos.php", { "puntajeTotal" : puntos, "id_juego" : 3} , function( data ) {
+  $( ".result" ).html( data );
+  });
  r=1;   
     }
     setTimeout(normal, 4000)

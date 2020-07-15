@@ -202,9 +202,12 @@ const init1 = () => {
 
 		var puntajeTotal= window.totales;
 		
-		$.post( "../puntos.php", { "puntajeTotal" : puntajeTotal, "id_juego" : 2 } , function( data ) {
+		$.post( "../puntos.php", { "puntajeTotal" : puntajeTotal, "id_juego" : 2} , function( data ) {
 		$( ".result" ).html( data );
 	  });
+	  
+
+
 
 	});
 	
