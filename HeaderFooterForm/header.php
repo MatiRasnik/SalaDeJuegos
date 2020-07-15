@@ -18,6 +18,14 @@
         session_start();
         
         echo "<h2>Bienvenido: ". $_SESSION['usuario']."</h2>";
+
+        $reg= $_SESSION['reg'];
+        if ($reg == true){
+            $reg=false;
+            $_SESSION['reg']=false;
+        echo '<script language="javascript">alert("Debe registrarse!");</script>';
+ 
+        };
         ?>
         </div>
     </nav>
