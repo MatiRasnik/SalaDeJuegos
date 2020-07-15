@@ -5,5 +5,8 @@ function hfindex(){
 
 function hfform(){
     $("#header").load("../HeaderFooterForm/header.php"); 
+    $("#headerlog").load("../HeaderFooterForm/headerlog.php"); 
     $("#footer").load("../HeaderFooterForm/footer.html");  
 };
+
+
