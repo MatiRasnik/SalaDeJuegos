@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+        <script src="../js/function.js"></script>
+        <script src="JS/Functions.js"></script>
+    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+        <link rel="stylesheet" href="../styles.css">
+        <title>Gameroom | Registrarse</title>
+        <div id="div-1">
+        </div>
+        <style>
+        .avatar {
+            vertical-align: middle;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        </style>
+
+        <script>
+         	function guardar()
+	{
+        
+		localStorage.setItem("usuario", document.getElementById("usuario").value);
+        localStorage.setItem("nombre", document.getElementById("nombre").value);
+        localStorage.setItem("contraseña", document.getElementById("contraseña").value);
+        location.reload();
+	}
+	function eliminar()
+	{
+        localStorage.clear();
+        location.reload();
+		mostrarDatos();
+	}
+	function mostrarDatos()
+	{
+        if(localStorage.getItem("usuario")){
+		var resultado="Usuario: "+localStorage.getItem("usuario");
+		document.getElementById("resultado").innerHTML=resultado;
+        }
+        if(localStorage.getItem("nombre")){
+		var resultado="Nombre : "+localStorage.getItem("nombre");
+        document.getElementById("nombre").innerHTML=resultado;
+        }
+        if(localStorage.getItem("contraseña")){
+		var resultado="Contraseña: "+localStorage.getItem("contraseña");
+		document.getElementById("contraseña").innerHTML=resultado;
+        }
+        
+	}
+ 
+	window.onload=function()
+	{
+        mostrarDatos();
+ 
+            document.getElementById("usuario").value=localStorage.getItem("usuario");
+			document.getElementById("nombre").value=localStorage.getItem("nombre");
+            document.getElementById("contraseña").value=localStorage.getItem("contraseña");
+	}
+	</script>
+ 
+	<style>
+	input[type=button] {
+border: 1px solid #2e518b; 
+padding: 10px; 
+background-color: #2e518b; 
+color: #ffffff; 
+text-decoration: none; 
+text-transform: uppercase; 
+font-family: 'Helvetica', sans-serif; 
+border-radius: 50px; 
+}
+	</style>
+</head>
+ 
+<body onload="hfform()">
+    <div id="header"></div>
+    <div id="LoginFrame">
+        <div>
+            <h2>Logearse:</h2>
+            <p>Logeate en Gameroom IEP y consigue todo tus logros y progresos.</p>
+            <form action='logearse.php' method='POST'>
+              <div class="form-group">
+                <label for="uname">Usuario:</label>
+                <input type="text" class="form-control" id="usuario" placeholder="Ingrese Usuario" name="usuario">
+              </div>
+              <div class="form-group">
+                <label for="pwd">Contraseña:</label>
+                <input type="password" class="form-control" id="contrasenia" placeholder="Ingrese Contraseña" name="contrasenia">
+              </div>
+              <button id="btn1" type="submit" class="btn btn-md btn-custom">Logearse</button>
+            </form>
+        </div>
+    </div>
+    <div id="footer"></div>
+</body>
+</html>
