@@ -1,7 +1,7 @@
 <?php
 include '../conexion.php';
 session_start();
-if(isset($_POST['usuario']) && $_POST['nombre'] && $_POST['contrasenia']){
+if(isset($_POST['usuario']) && $_POST['nombre'] && $_POST['contrasenia']  && $_POST['apellido']){
     // aquí pongo lo de mysql para verificar que no exista usuario y para guardar el nuevo usuario.
     
     $sql = "SELECT usuario FROM usuarios WHERE usuario = ".$_POST['usuario'];
