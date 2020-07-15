@@ -18,7 +18,7 @@ if(isset($_POST['puntajeTotal']) && $_POST['id_juego']){
     $id_juego = $_POST['id_juego'];
 
     
-            $sql = "UPDATE puntaje SET puntos_j = ".$puntos_j." WHERE usuario = ".$usuario." and id_juego=."$id_juego.";
+            $sql = "UPDATE puntaje SET puntos_j = ".$puntos_j." WHERE usuario = ".$usuario." and id_juego=".$id_juego.";
            
     
     
