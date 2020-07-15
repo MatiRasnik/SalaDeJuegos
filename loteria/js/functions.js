@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	init4();
 	
 });
-
+ 
 
 const init1 = () => {
 	const button = document.querySelector("#go");
@@ -127,7 +127,7 @@ const init1 = () => {
 		borde.classList.add("border");
 		button.classList.add("hidden");
 		let lotto = [];
-
+		
 		//Fill lotto array with 6 unique numbers
 		for (i = 0; i< 6; i++) {
 			const number = numbers[Math.floor(Math.random() * numbers.length)];
@@ -200,8 +200,9 @@ const init1 = () => {
 
 		button3.classList.remove("hidden");
 
-		var puntajeTotal= widnow.totales;
-		$.post( "localhost\SalaDeJuegos\puntos.php", { "puntajeTotal" : puntajeTotal, "id_juego" : 2 } , function( data ) {
+		var puntajeTotal= window.totales;
+		alert("estoy");
+		$.post( "../puntos.php", { "puntajeTotal" : puntajeTotal, "id_juego" : 2 } , function( data ) {
 		$( ".result" ).html( data );
 	  });
 
