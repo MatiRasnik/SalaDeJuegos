@@ -1,4 +1,6 @@
 <?php
+
+
 include '../conexion.php';
 session_start();
 if(isset($_POST['usuario']) && $_POST['nombre'] && $_POST['contrasenia']  && $_POST['apellido']){

@@ -12,6 +12,16 @@
         <script src="../js/function.js"></script> 
     </head>
 
+    <?php
+    session_start();
+    
+            $_SESSION['reg'] = false;
+             if (!isset($_SESSION['usuario'])){
+                $_SESSION['reg'] = true;
+                header("Location: http://localhost/SalaDeJuegos/register/Register.html");
+             }
+    ?>
+
     <body onload="inicio()">
 
         <div id="header"></div>

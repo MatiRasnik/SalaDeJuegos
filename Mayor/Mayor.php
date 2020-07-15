@@ -14,6 +14,17 @@
     <meta name="google" content="notranslate" />
     <title>Gameroom | El Mayor</title>
   </head>
+
+  <?php
+  session_start();
+
+            $_SESSION['reg'] = false;
+           if (!isset($_SESSION['usuario'])){
+              $_SESSION['reg'] = true;
+              header("Location: http://localhost/SalaDeJuegos/register/Register.html");
+           }
+  ?>
+
     <body onload="hfform()">
       <div id="header"></div>
       <div id="Linea"></div>
