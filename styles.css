@@ -199,6 +199,13 @@ td {
 #TextoModal{
     color:black;
 }
+*.unselectable {
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
 /*Ahorcado*/
 #container, #inicioJuego{
     padding-top: 2%;
