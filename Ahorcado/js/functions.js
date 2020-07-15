@@ -165,4 +165,7 @@ function inicio() {
   inicializarSession()
   mostrarPerdidas();
   mostrarGanadas();
+  $.post( "../puntos.php", { "puntajeTotal" : sessionStorage.getItem('ganadas'), "id_juego" : 1} , function( data ) {
+    $( ".result" ).html( data );
+    });
 }
