@@ -11,7 +11,6 @@ if(isset($_POST['usuario']) && $_POST['contrasenia']){
                         header('Location: ../index.html');
                
         }else{ 
-                $_SESSION['reg2'] = true;
                 header("Location: ../Register/login.html");            
                 echo '<script language="javascript">alert("El usuario o la contra esta mal!");</script>';
         }
