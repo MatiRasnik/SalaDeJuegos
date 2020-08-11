@@ -20,8 +20,8 @@
                     $buttonvisible = "display: block;";
                 }
                 ?>   
-            <a class="nav-link" href="register/Login.html" style="<?php echo $buttonvisible ?>">Login</a>
-            <a class="nav-link" href="register/Register.html" style="<?php echo $buttonvisible ?>">Register</a>
+            <a class="nav-link" href="Login.html" style="<?php echo $buttonvisible ?>">Login</a>
+            <a class="nav-link" href="Register.html" style="<?php echo $buttonvisible ?>">Register</a>
         </ul>
         <?php
         

@@ -1,5 +1,5 @@
 const init = () => {
-	window.totales=0;
+	window.totales = 0;
 	window.totales1=0;
 	const button1 = document.querySelector("#numbers");
 	const button2 = document.querySelector("#go");
@@ -200,11 +200,13 @@ const init1 = () => {
 
 		button3.classList.remove("hidden");
 
-		var puntajeTotal= window.totales;
+		var puntajeTotal= puntos;
 		
 		$.post( "../puntos.php", { "puntajeTotal" : puntajeTotal, "id_juego" : 2} , function( data ) {
-		$( ".result" ).html( data );
+			document.getElementById("total").innerHTML = data;
 	  });
+
+	  
 	  
 
 

@@ -21,7 +21,7 @@
             $_SESSION['reg'] = false;
            if (!isset($_SESSION['usuario'])){
               $_SESSION['reg'] = true;
-              header("Location: http://localhost/SalaDeJuegos/register/Register.html");
+              header("Location: ../Register/Register.html");
            }
   ?>
 
